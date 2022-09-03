@@ -1,0 +1,21 @@
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+    int orr=0;
+    int app=0;
+     int sz=apples.size();
+     for(int i=0;i<sz;i++){
+         int chk=apples[i]+a;
+         if(chk>=s && chk <=t){
+             app++;
+         }
+     }
+     sz=oranges.size();
+    for(int i=0;i<sz;i++){
+         int chk=oranges[i]+b;
+         if(chk>=s && chk <=t){
+             orr++;
+         }
+     }
+     cout<<app<<endl<<orr;
+
+}
+// question link:  https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=false
