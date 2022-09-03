@@ -1,0 +1,24 @@
+vector<int> gradingStudents(vector<int> grades) {
+  int sz=grades.size();
+  vector<int> res;
+  for(int i=0;i<sz;i++){
+     if(grades[i]>=38 &&grades[i]%5!=0){
+         int qut=(grades[i]%5);
+         int quti=5-qut;
+         if(quti>=3){
+             res.push_back(grades[i]);
+             continue;
+         }
+         else{
+              res.push_back(grades[i]+quti);
+         }
+     }
+     else{
+         res.push_back(grades[i]);
+     }
+     
+  }
+  return res;
+}
+ //Question link:
+ // https://www.hackerrank.com/challenges/grading/problem?isFullScreen=false
